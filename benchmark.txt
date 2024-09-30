@@ -1,0 +1,54 @@
+     Running benches/benchmark.rs (target/release/deps/benchmark-349b82f0276eafb7)
+Gnuplot not found, using plotters backend
+uuid_v4_cmp_string_10   time:   [31.175 ns 31.324 ns 31.504 ns]
+Found 14 outliers among 100 measurements (14.00%)
+  6 (6.00%) high mild
+  8 (8.00%) high severe
+
+uuid_v4_cmp_bytes_10    time:   [2.9585 ns 3.1307 ns 3.3122 ns]
+Found 10 outliers among 100 measurements (10.00%)
+  10 (10.00%) low mild
+
+uuid_v4_cmp_string_100  time:   [296.42 ns 299.11 ns 302.32 ns]
+Found 21 outliers among 100 measurements (21.00%)
+  4 (4.00%) high mild
+  17 (17.00%) high severe
+
+uuid_v4_cmp_bytes_100   time:   [4.4721 ns 4.5763 ns 4.6774 ns]
+Found 5 outliers among 100 measurements (5.00%)
+  1 (1.00%) low mild
+  4 (4.00%) high mild
+
+uuid_v4_cmp_string_500  time:   [1.5273 µs 1.5419 µs 1.5601 µs]
+Found 17 outliers among 100 measurements (17.00%)
+  1 (1.00%) high mild
+  16 (16.00%) high severe
+
+uuid_v4_cmp_bytes_500   time:   [3.8500 ns 3.9838 ns 4.1213 ns]
+Found 5 outliers among 100 measurements (5.00%)
+  4 (4.00%) low mild
+  1 (1.00%) high mild
+
+uuid_v4_cmp_string_1000 time:   [3.0779 µs 3.0995 µs 3.1247 µs]
+Found 20 outliers among 100 measurements (20.00%)
+  1 (1.00%) high mild
+  19 (19.00%) high severe
+
+uuid_v4_cmp_bytes_1000  time:   [4.2768 ns 4.3469 ns 4.4150 ns]
+Found 15 outliers among 100 measurements (15.00%)
+  4 (4.00%) low severe
+  1 (1.00%) low mild
+  7 (7.00%) high mild
+  3 (3.00%) high severe
+
+
+real    2m23.364s
+user    3m7.455s
+sys     0m1.647s
+
+@thomas-k-cameron ➜ /workspaces/articles/stuff/rust-string-equality-vs-bytes-equality (main) $ cargo --version
+cargo 1.79.0 (ffa9cf99a 2024-06-03)
+@thomas-k-cameron ➜ /workspaces/articles/stuff/rust-string-equality-vs-bytes-equality (main) $ rustup --version
+rustup 1.27.1 (54dd3d00f 2024-04-24)
+info: This is the version for the rustup toolchain manager, not the rustc compiler.
+info: The currently active `rustc` version is `rustc 1.79.0 (129f3b996 2024-06-10)`
