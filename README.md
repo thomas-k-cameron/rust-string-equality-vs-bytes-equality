@@ -42,7 +42,9 @@ This is the result that I got running on github codespace instance.
 | string          | 1000           | 3.0453 µs   |
 | bytes           | 1000           | 4.3324 ns   |
 
-You can find the code **[HERE](https://github.com/thomas-k-cameron/articles/stuff/rust-string-equality-vs-bytes-equality)**.
+## How to reproduce
+
+Simply run `cargo bench` on the root of this repository.
 
 ## What does the assembly code look lie?  
 
