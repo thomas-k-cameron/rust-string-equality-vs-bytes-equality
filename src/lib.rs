@@ -1,4 +1,14 @@
+#[no_mangle]
+pub fn single_match_string(s: &str) -> bool {
+    s == "05c9a89b-1ee1-4f38-9837-92a20f0e6d30"
+}
 
+#[no_mangle]
+pub fn single_match_bytes(s: &str) -> bool {
+    s.as_bytes() == b"05c9a89b-1ee1-4f38-9837-92a20f0e6d30"
+}
+
+#[no_mangle]
 pub fn uuid_v4_cmp_string_10(s: &str) -> i64 {
     match s {
         "05c9a89b-1ee1-4f38-9837-92a20f0e6d30" => 9,
@@ -15,6 +25,7 @@ pub fn uuid_v4_cmp_string_10(s: &str) -> i64 {
     }
 }
 
+#[no_mangle]
 pub fn uuid_v4_cmp_bytes_10(s: &str) -> i64 {
     match s.as_bytes() {
         b"05c9a89b-1ee1-4f38-9837-92a20f0e6d30" => 9,
@@ -31,6 +42,7 @@ pub fn uuid_v4_cmp_bytes_10(s: &str) -> i64 {
     }
 }
 
+#[no_mangle]
 pub fn uuid_v4_cmp_string_100(s: &str) -> i64 {
     match s {
         "022e9150-1d37-418f-a89a-0b9b6d308c7d" => 99,
@@ -137,6 +149,7 @@ pub fn uuid_v4_cmp_string_100(s: &str) -> i64 {
     }
 }
 
+#[no_mangle]
 pub fn uuid_v4_cmp_bytes_100(s: &str) -> i64 {
     match s.as_bytes() {
         b"022e9150-1d37-418f-a89a-0b9b6d308c7d" => 99,
@@ -243,6 +256,7 @@ pub fn uuid_v4_cmp_bytes_100(s: &str) -> i64 {
     }
 }
 
+#[no_mangle]
 pub fn uuid_v4_cmp_string_500(s: &str) -> i64 {
     match s {
         "c1acfd54-1b5b-445a-af97-9ff6cd6d6efe" => 499,
@@ -749,6 +763,7 @@ pub fn uuid_v4_cmp_string_500(s: &str) -> i64 {
     }
 }
 
+#[no_mangle]
 pub fn uuid_v4_cmp_bytes_500(s: &str) -> i64 {
     match s.as_bytes() {
         b"c1acfd54-1b5b-445a-af97-9ff6cd6d6efe" => 499,
@@ -1255,6 +1270,7 @@ pub fn uuid_v4_cmp_bytes_500(s: &str) -> i64 {
     }
 }
 
+#[no_mangle]
 pub fn uuid_v4_cmp_string_1000(s: &str) -> i64 {
     match s {
         "08a471a0-6e06-484d-a79e-87c7f61652d2" => 999,
@@ -2261,6 +2277,7 @@ pub fn uuid_v4_cmp_string_1000(s: &str) -> i64 {
     }
 }
 
+#[no_mangle]
 pub fn uuid_v4_cmp_bytes_1000(s: &str) -> i64 {
     match s.as_bytes() {
         b"08a471a0-6e06-484d-a79e-87c7f61652d2" => 999,

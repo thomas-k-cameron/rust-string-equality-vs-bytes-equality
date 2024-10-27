@@ -1,54 +1,83 @@
-     Running benches/benchmark.rs (target/release/deps/benchmark-349b82f0276eafb7)
-Gnuplot not found, using plotters backend
-uuid_v4_cmp_string_10   time:   [31.175 ns 31.324 ns 31.504 ns]
-Found 14 outliers among 100 measurements (14.00%)
-  6 (6.00%) high mild
-  8 (8.00%) high severe
-
-uuid_v4_cmp_bytes_10    time:   [2.9585 ns 3.1307 ns 3.3122 ns]
-Found 10 outliers among 100 measurements (10.00%)
-  10 (10.00%) low mild
-
-uuid_v4_cmp_string_100  time:   [296.42 ns 299.11 ns 302.32 ns]
-Found 21 outliers among 100 measurements (21.00%)
+uuid_v4_cmp_string_10   time:   [31.150 ns 31.251 ns 31.371 ns]
+                        change: [-0.2169% +0.4931% +1.1037%] (p = 0.16 > 0.05)
+                        No change in performance detected.
+Found 7 outliers among 100 measurements (7.00%)
   4 (4.00%) high mild
-  17 (17.00%) high severe
-
-uuid_v4_cmp_bytes_100   time:   [4.4721 ns 4.5763 ns 4.6774 ns]
-Found 5 outliers among 100 measurements (5.00%)
-  1 (1.00%) low mild
-  4 (4.00%) high mild
-
-uuid_v4_cmp_string_500  time:   [1.5273 µs 1.5419 µs 1.5601 µs]
-Found 17 outliers among 100 measurements (17.00%)
-  1 (1.00%) high mild
-  16 (16.00%) high severe
-
-uuid_v4_cmp_bytes_500   time:   [3.8500 ns 3.9838 ns 4.1213 ns]
-Found 5 outliers among 100 measurements (5.00%)
-  4 (4.00%) low mild
-  1 (1.00%) high mild
-
-uuid_v4_cmp_string_1000 time:   [3.0779 µs 3.0995 µs 3.1247 µs]
-Found 20 outliers among 100 measurements (20.00%)
-  1 (1.00%) high mild
-  19 (19.00%) high severe
-
-uuid_v4_cmp_bytes_1000  time:   [4.2768 ns 4.3469 ns 4.4150 ns]
-Found 15 outliers among 100 measurements (15.00%)
-  4 (4.00%) low severe
-  1 (1.00%) low mild
-  7 (7.00%) high mild
   3 (3.00%) high severe
 
+uuid_v4_cmp_bytes_10    time:   [2.6961 ns 2.8727 ns 3.0547 ns]
+                        change: [-8.4643% -3.4360% +2.1337%] (p = 0.23 > 0.05)
+                        No change in performance detected.
 
-real    2m23.364s
-user    3m7.455s
-sys     0m1.647s
+uuid_v4_cmp_string_100  time:   [295.41 ns 296.23 ns 297.27 ns]
+                        change: [-0.4279% +0.0477% +0.4592%] (p = 0.85 > 0.05)
+                        No change in performance detected.
+Found 11 outliers among 100 measurements (11.00%)
+  2 (2.00%) high mild
+  9 (9.00%) high severe
 
-@thomas-k-cameron ➜ /workspaces/articles/stuff/rust-string-equality-vs-bytes-equality (main) $ cargo --version
-cargo 1.79.0 (ffa9cf99a 2024-06-03)
-@thomas-k-cameron ➜ /workspaces/articles/stuff/rust-string-equality-vs-bytes-equality (main) $ rustup --version
-rustup 1.27.1 (54dd3d00f 2024-04-24)
-info: This is the version for the rustup toolchain manager, not the rustc compiler.
-info: The currently active `rustc` version is `rustc 1.79.0 (129f3b996 2024-06-10)`
+uuid_v4_cmp_bytes_100   time:   [3.5290 ns 3.6329 ns 3.7324 ns]
+                        change: [-2.7956% +0.0764% +2.9442%] (p = 0.96 > 0.05)
+                        No change in performance detected.
+Found 14 outliers among 100 measurements (14.00%)
+  8 (8.00%) low mild
+  5 (5.00%) high mild
+  1 (1.00%) high severe
+
+uuid_v4_cmp_string_500  time:   [1.4702 µs 1.4801 µs 1.4939 µs]
+                        change: [+0.0395% +0.5045% +1.1022%] (p = 0.06 > 0.05)
+                        No change in performance detected.
+Found 11 outliers among 100 measurements (11.00%)
+  3 (3.00%) high mild
+  8 (8.00%) high severe
+
+uuid_v4_cmp_bytes_500   time:   [4.4391 ns 4.5890 ns 4.7303 ns]
+                        change: [-6.1354% -2.8332% +0.6242%] (p = 0.10 > 0.05)
+                        No change in performance detected.
+Found 10 outliers among 100 measurements (10.00%)
+  5 (5.00%) low mild
+  5 (5.00%) high mild
+
+uuid_v4_cmp_string_1000 time:   [3.0480 µs 3.0582 µs 3.0728 µs]
+                        change: [-0.8406% -0.2963% +0.1784%] (p = 0.28 > 0.05)
+                        No change in performance detected.
+Found 15 outliers among 100 measurements (15.00%)
+  1 (1.00%) low mild
+  4 (4.00%) high mild
+  10 (10.00%) high severe
+
+uuid_v4_cmp_bytes_1000  time:   [4.3380 ns 4.4520 ns 4.5708 ns]
+                        change: [-2.8859% +0.4645% +3.9455%] (p = 0.79 > 0.05)
+                        No change in performance detected.
+Found 5 outliers among 100 measurements (5.00%)
+  5 (5.00%) high mild
+
+eq_single_match_string  time:   [4.3352 ns 4.3397 ns 4.3454 ns]
+                        change: [-0.6130% -0.2872% -0.0183%] (p = 0.06 > 0.05)
+                        No change in performance detected.
+Found 13 outliers among 100 measurements (13.00%)
+  2 (2.00%) low mild
+  5 (5.00%) high mild
+  6 (6.00%) high severe
+
+eq_single_match_bytes   time:   [4.6446 ns 4.6573 ns 4.6814 ns]
+                        change: [-0.9726% -0.4180% +0.0722%] (p = 0.13 > 0.05)
+                        No change in performance detected.
+Found 12 outliers among 100 measurements (12.00%)
+  5 (5.00%) high mild
+  7 (7.00%) high severe
+
+neq_single_match_string time:   [4.3407 ns 4.3543 ns 4.3744 ns]
+                        change: [+0.0139% +0.6918% +1.4930%] (p = 0.07 > 0.05)
+                        No change in performance detected.
+Found 15 outliers among 100 measurements (15.00%)
+  1 (1.00%) high mild
+  14 (14.00%) high severe
+
+neq_single_match_bytes  time:   [4.6578 ns 4.6871 ns 4.7233 ns]
+                        change: [-0.8831% -0.1787% +0.4756%] (p = 0.62 > 0.05)
+                        No change in performance detected.
+Found 14 outliers among 100 measurements (14.00%)
+  1 (1.00%) high mild
+  13 (13.00%) high severe
+
