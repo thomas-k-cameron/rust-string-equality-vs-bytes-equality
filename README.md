@@ -1,4 +1,4 @@
-# Optimizing Rust lang's match statement for compile time known strings
+# Reading x86 assembly to understand how Rust lang compare equality of compile time known string
 
 I created a match statement where each match arm is a uuid v4 that I randomly generated. When I compared it against new random uuid v4, it showed that match statement with bytes were lot faster.
 
@@ -44,7 +44,7 @@ This is the result that I got running on github codespace instance.
 
 ## How to reproduce
 
-Simply run `cargo bench` on the root of this repository.
+Simply run `cargo bench` on the root of this repository, and get the result with criterion.
 
 ## What does the assembly code look lie?  
 
