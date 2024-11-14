@@ -44,8 +44,9 @@ This is the result that I got running on github codespace instance.
 
 ## How to reproduce
 
-Simply run `cargo bench` on the root of this repository, and get the result with criterion.
+Simply run `cargo bench` on the root of this repository, and get the result with criterion.  
 Also, you can find the code here.
+
 https://github.com/thomas-k-cameron/rust-string-equality-vs-bytes-equality/blob/master/src/lib.rs.
 
 ## Why is it happening?
