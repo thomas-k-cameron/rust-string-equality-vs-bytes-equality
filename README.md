@@ -5,8 +5,7 @@ match statement where each match arm is a uuid v4 that I randomly generated.
 
 These two functions will always produce the same reuslt, however, the benchmark shows that bytes variant is faster.
 
-LINK: <https://rust.godbolt.org/z/fbnP1Ph9c>
-
+e.g.
 ```rust
 fn str_match(totally_random_uuid_v4: &str) -> i64
 {
@@ -46,6 +45,8 @@ This is the result that I got running on github codespace instance.
 ## How to reproduce
 
 Simply run `cargo bench` on the root of this repository, and get the result with criterion.
+Also, you can find the code here.
+https://github.com/thomas-k-cameron/rust-string-equality-vs-bytes-equality/blob/master/src/lib.rs.
 
 ## Why is it happening?
 
