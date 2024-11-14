@@ -1,6 +1,7 @@
-# Reading x86 assembly to understand how Rust lang compare equality of compile time known string
+# Equality Comparison for String Known at Compile Time with Length of 33 or More with Non-Repeating bytes is Slower than Array of `u8`
 
-I created a match statement where each match arm is a uuid v4 that I randomly generated. When I compared it against new random uuid v4, it showed that match statement with bytes were lot faster.
+I created a function that performs equality comparison agaisnt a uuid4.
+match statement where each match arm is a uuid v4 that I randomly generated. 
 
 These two functions will always produce the same reuslt, however, the benchmark shows that bytes variant is faster.
 
@@ -46,17 +47,8 @@ This is the result that I got running on github codespace instance.
 
 Simply run `cargo bench` on the root of this repository, and get the result with criterion.
 
-## What does the assembly code look lie?  
+## Why is it happening?
 
-As you can see it on compiler explorer (<https://rust.godbolt.org/z/fbnP1Ph9c>), the match statement uses `bcmp`, a `libc` function for comparing byte-by-byte, to evaluate the equality of a `string`. However, when the data type is `&[u8]`, it creates an assembly instruction that is an equivalent of `strcmp` in c lang.
+As you can see it on compiler explorer (<https://rust.godbolt.org/z/fbnP1Ph9c>), the match statement uses `bcmp`, a `libc` function for byte-by-byte conparison, to perform equality comparison. However, when the data type is `&[u8]`, it creates instruction that is an equivalent of `strcmp` in c lang.
 
-## Conclusion
-
-Rust implements String's `Eq` on compiler's side that implementation is not visible as Rust code.
-
-On compiler explorer, you can see that string is byte-packed, and Rust performs a SIMD compare when the string is longer.
-
-<https://rust.godbolt.org/z/P6qEvj8n8>
-
-I think String's Eq is implemented in a way that reflects the context more than bytes.  
-However, I haven't been able to find an example where string's compare for equality is faster than bytes.
+When the length of a String is 33 or less, it will use other instructions for equality comparison.
